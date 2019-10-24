@@ -19,14 +19,12 @@ rmarkdown::draft(
 )
 ```
 
-[R Markdown Help](https://bookdown.org/yihui/rmarkdown/)
 
 # Example Images
 
 Chapter Report |  Two Column Article
 :-------------------------:|:-------------------------:
 ![](https://github.com/cjber/uolrmarkdown/blob/master/chapter.png)  |  ![](https://github.com/cjber/uolrmarkdown/blob/master/twocol.png)
-![](https://raw.githubusercontent.com/cjber/chapterreport/master/example.png)
 
 # Customisation
 
@@ -37,3 +35,6 @@ Customisation of the knitr chunks can be accessed through `template -> defaults.
 The main bib file is given in `bib/kbib.bib` I use Zotero to generate bibtex.
 
 For the article template for the written work only the main `.Rmd` needs editing, but in the chapter report each individual chapter should be edited separately.
+
+For additional help with R Markdown see [](https://bookdown.org/yihui/rmarkdown/).
+
