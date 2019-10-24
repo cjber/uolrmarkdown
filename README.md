@@ -10,14 +10,23 @@ If using RStudio:
 
 `New File -> R Markdown -> From Template -> UoL R Markdown`
 
-Otherwise:
+Otherwise for the article:
+
+```r
+rmarkdown::draft(
+  'index.Rmd', template = 'article', 
+  package = 'uolrmarkdown', create_dir = TRUE
+)
+```
+
+and for the report:
 
 ```r
 rmarkdown::draft(
   'index.Rmd', template = 'report', 
-  package = 'chapterreport', create_dir = TRUE
+  package = 'uolrmarkdown', create_dir = TRUE
 )
-```
+`
 
 
 # Example Images
