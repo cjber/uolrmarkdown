@@ -39,11 +39,10 @@ Chapter Report |  Two Column Article
 
 Customisation of the knitr chunks can be accessed through `template -> defaults.r`. Here additional citations may be manually added if required e.g. QGIS. Additionally the default ggplot2 theme is set here.
 
-`scripts -> functions.r` provides an example r script for loading in required packages and defining custom functions. I generally use `source("./functions.r")` with my scripts to prevent loading the required libs each time.
+`scripts -> functions.r` provides an example r script for loading in required packages and defining custom functions. I generally use `source("./functions.r")` with my scripts to prevent loading the required libs and functions each time.
 
 The main bib file is given in `bib/kbib.bib` I use Zotero to generate bibtex.
 
 For the article template for the written work only the main `.Rmd` needs editing, but in the chapter report each individual chapter should be edited separately.
 
-For additional help with R Markdown see [yihur](https://bookdown.org/yihui/rmarkdown/).
-
+For additional help with R Markdown see [yihui](https://bookdown.org/yihui/rmarkdown/).
