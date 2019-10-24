@@ -26,7 +26,7 @@ rmarkdown::draft(
   'index.Rmd', template = 'report', 
   package = 'uolrmarkdown', create_dir = TRUE
 )
-`
+```
 
 
 # Example Images
@@ -45,5 +45,5 @@ The main bib file is given in `bib/kbib.bib` I use Zotero to generate bibtex.
 
 For the article template for the written work only the main `.Rmd` needs editing, but in the chapter report each individual chapter should be edited separately.
 
-For additional help with R Markdown see [](https://bookdown.org/yihui/rmarkdown/).
+For additional help with R Markdown see [yihur](https://bookdown.org/yihui/rmarkdown/).
 
