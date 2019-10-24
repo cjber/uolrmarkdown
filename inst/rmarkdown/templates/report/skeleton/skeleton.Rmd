@@ -1,0 +1,35 @@
+---
+author: 'Your R. Name'
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+degree: 'Data Analytics and Society PhD'
+title: 'Title of Chapter Based Report'
+abstract: |
+    `r if(knitr:::is_latex_output()) paste(readLines("00_abstract/abstract.rmd"), collapse = '\n  ')`
+keywords: 'testing; testing; testing'
+output:
+  pdf_document:
+    template: ./template/template.tex
+    keep_tex: true
+---
+```{r defaults, echo = F, warning = F, message = F}
+source("./template/defaults.r")
+```
+```{r introduction, child = "01_introduction/introduction.rmd"}
+```
+```{r literature, child = "02_literature/literature.rmd"}
+```
+```{r methods, child = "03_methods/methods.rmd"}
+```
+```{r results, child = "04_results/results.rmd"}
+```
+```{r discussion, child = "05_discussion/discussion.rmd"}
+```
+```{r pkgbib, results='asis'}
+# no cite all loaded packages from external bib
+cat(paste0("\\nocite{", paste0(pkgs, collapse = ',', sep = ''),"}"))
+```
+\noindent\rule{2cm}{0.4pt}
+```{r, wc, engine ='bash', results = 'asis', cache = F, error = T}
+printf "Word Count: "
+python wclatex.py *.tex
+```

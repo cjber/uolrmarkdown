@@ -1,0 +1,203 @@
+\documentclass[a4paper, twocolumn, 10pt]{extarticle}
+\usepackage{lipsum} % for testing
+\usepackage{titling}
+\usepackage{authblk}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{textcomp} % for euros
+\usepackage{float}
+
+% remove abs title
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% margins
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+
+% fonts
+\usepackage[defaultsans]{droidsans}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+
+% misc
+\usepackage{amsmath} % align equations
+\usepackage{type1cm}
+\usepackage{lettrine} % add large first letters
+\usepackage{natbib}
+
+% Create \R{}
+\newcommand{\R}{\textbf{\textsf{R}}}
+
+% better paragraph indents
+\edef\restoreparindent{\parindent=\the\parindent\relax}
+\usepackage{parskip}
+\restoreparindent
+
+% captions
+\usepackage[font=footnotesize,
+            labelfont=bf,
+            textfont=it,
+            margin=.5cm
+            ]{caption}
+% Figure names
+\renewcommand{\figurename}{Fig.}
+
+% spacing
+\usepackage{setspace}
+\onehalfspacing
+
+
+% style
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+
+% custom rule lines for headers/footersr
+\newcommand*\ruleline[1]{\par\noindent\raisebox{.8ex}{\makebox[\linewidth]{\hrulefill\hspace{1ex}\raisebox{-.6ex}{#1}\hspace{1ex}}}}
+
+\newcommand*\rulelinel[1]{\par\noindent\raisebox{.8ex}{\makebox[\linewidth]{\hrulefill\hspace{1ex}\raisebox{-.6ex}{#1}\hspace{1ex}\hrulefill}}}
+
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\rfoot{
+    \sffamily\fontsize{6}{6}{\textbf{{\normalfont \sffamily{Cillian Berragan}}\hskip 5pt \textbar \hskip 5pt 23 October, 2019 \hskip 5pt \textbar\hskip 5pt \thepage\ - \pageref{LastPage}}}
+}}
+
+% For professional looking tables
+\usepackage{booktabs} 
+
+% Hyperlinks
+\definecolor{darkblue}{rgb}{0.0,0.0,0.4}
+\definecolor{darkred}{rgb}{0.4,0.0,0.0}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    linkcolor = darkred,
+    anchorcolor = darkred,
+    citecolor = darkred,
+    urlcolor = darkblue
+}
+\urlstyle{rm}
+
+% change chapters
+\usepackage{titlesec}
+
+% sections
+\titleformat{\section}
+{\fontsize{10}{10}\bfseries\sffamily}
+{}
+{0.5em}
+{\thesection. }
+[]
+
+\titleformat{name=\section,numberless}
+{\fontsize{10}{10}\bfseries}
+{}
+{0.5em}
+{}
+[]
+
+% subsections
+\titleformat{\subsection}
+{\fontsize{9}{9}\itshape\bfseries\sffamily}
+{}
+{0.5em}
+{\thesubsection. }
+[]
+\providecommand{\keywords}[1]{\footnotesize\textit{Keywords: }\normalfont\textit #1\selectfont}
+
+\newcommand{\copyrightfont}{\normalfont\rmfamily\fontsize{7}{8}\selectfont}
+\renewcommand\Authfont{\normalfont\sffamily\bfseries\fontsize{8}{8}\selectfont}
+\newcommand{\absfont}{\sffamily\bfseries\fontsize{7}{7}\selectfont}
+\newcommand{\datesfont}{\normalfont\sffamily\fontsize{6}{6}\selectfont}
+\newcommand{\titlefont}{\normalfont\rmfamily\fontsize{22pt}{24pt}\selectfont}
+
+\renewcommand*\footnoterule{}
+
+\setlength{\bibsep}{0.0pt}
+
+\appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}}
+
+% reinstate the correct level for list of tables and figures
+\appto\listoffigures{\addtocontents{lof}{\protect\setcounter{tocdepth}{1}}}
+\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{1}}}
+
+% custom title
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+    \baselineskip=24pt \titlefont{\@title\par}
+    \vskip 10pt
+    \Authfont{\@author}
+    \vskip 8pt
+    \datesfont{This version was compiled on \@date}
+    \vskip 8pt
+\end{flushleft}\egroup
+}
+\makeatother
+
+\title{Two Column Article Template}
+\author{Cillian Berragan}
+
+
+
+\pagestyle{plain}
+\begin{document}
+
+\twocolumn[
+    \maketitle
+
+\author{Cillian Berragan}
+
+\date{23 October, 2019}
+]
+{\setstretch{1.5}\absfont{\lipsum[1-1]}\par}
+\keywords{testing; testing; testing}
+\vskip 20pt
+
+\hypertarget{section-1}{%
+\section{Section 1}\label{section-1}}
+
+\lipsum[1-2]
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=.75\linewidth]{skeleton_files/figure-latex/plot-1} 
+
+}
+
+\caption{Example plot showing default ggplot2 theme}\label{fig:plot}
+\end{figure}
+
+\hypertarget{test}{%
+\subsection{test}\label{test}}
+
+Reference figure \ref{fig:plot}
+
+\lipsum[1-2]
+
+\hypertarget{section-2}{%
+\section{Section 2}\label{section-2}}
+
+\lipsum[1-50]
+
+Hello.
+
+\nocite{tidyverse,devtools,Hmisc,PerformanceAnalytics,ggthemes,RStoolbox,broom,viridis,viridisLite,ggpubr,magrittr,sf,kableExtra,scales,lidR,raster,nvimcom,varhandle,future,rgdal,pbapply,cowplot,bibtex,benchmarkme,parallel,showtext,data.table,wesanderson}
+\noindent
+
+\rule{2cm}{0.4pt}
+
+Word Count: 6
+
+\bibliographystyle{jss}
+{\footnotesize\bibliography{bib/kbib.bib, bib/rbib.bib}}
+
+\cleardoublepage
+\end{document}

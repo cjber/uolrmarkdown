@@ -1,0 +1,13 @@
+Package: uolrmarkdown
+Title: Templates for Use in Academic Work
+Version: 0.0.0.1000
+Authors@R: 
+    person(given = "Cillian",
+           family = "Berragan",
+           role = c("aut", "cre"),
+           email = "cjberragan@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Chapter and two column r markdown layouts
+License: MIT
+Encoding: UTF-8
+LazyData: true
