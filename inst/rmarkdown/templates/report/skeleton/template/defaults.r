@@ -25,7 +25,7 @@ write.bib(pkgs, "bib/rbib.bib")
 r <- citation()
 write.bib(r, "bib/rbib.bib", append = TRUE)
 
-# manual citations here..
+# manual citations here
 man_bib <-
     "@Manual{QGIS,
     title = {QGIS Geographic Information System},

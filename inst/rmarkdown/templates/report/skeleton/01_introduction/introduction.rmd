@@ -1,5 +1,3 @@
-# Introduction
-
 \lipsum[1-2]
 
 ## Example plot
@@ -11,7 +9,7 @@ Reference to a plot Figure \ref{fig:plot}.
 ```{r, plot, fig.cap = "Example plot showing default ggplot2 theme"}
 data(mpg, package = "ggplot2")
 
-# Scatterplot
+# Scatterplot using default theme set in defaults.r
 g <- ggplot(mpg, aes(cty, hwy))
 g + geom_jitter(width = .5, size = 1) +
   labs(

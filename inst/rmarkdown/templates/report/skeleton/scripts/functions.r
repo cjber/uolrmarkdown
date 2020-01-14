@@ -4,32 +4,14 @@ library(pacman)
 pkgs <- c(
     "tidyverse",
     "devtools",
-    "Hmisc",
-    "PerformanceAnalytics",
     "ggthemes",
-    "RStoolbox",
-    "broom",
-    "viridis",
-    "viridisLite",
-    "ggpubr",
-    "magrittr",
-    "sf",
     "kableExtra",
     "scales",
-    "lidR",
-    "raster",
-    "nvimcom",
-    "varhandle",
-    "future",
-    "rgdal",
-    "pbapply",
     "cowplot",
     "bibtex",
     "benchmarkme",
-    "parallel",
     "showtext",
-    "data.table",
-    "wesanderson"
+    "data.table"
 )
 
 pacman::p_load(pkgs, character.only = T)
