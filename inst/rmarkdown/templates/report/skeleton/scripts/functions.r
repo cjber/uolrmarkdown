@@ -1,4 +1,5 @@
 ## ---- libs
+if (!require("pacman")) install.packages("pacman")
 library(pacman)
 
 pkgs <- c(
