@@ -1,0 +1,128 @@
+/* FONTS */
+
+@font-face {
+  font-family: "Adelle Regular";
+  src: 
+  url("fonts/adelle/Adelle_Reg.otf") format("opentype");
+  }
+
+  @font-face {
+  font-family: "Avenir Regular";
+  src: 
+  url("fonts/avenir/AvenirNextLTPro-Regular.otf") format("opentype");
+  }
+
+@font-face {
+  font-family: "Droid Mono";
+  src: 
+  url("fonts/droid/DroidSansMono.ttf");
+  }
+/* HEADINGS */
+
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 22px;
+  font-family: "Adelle Regular";
+}
+
+h1 {
+padding-top: 50px;
+}
+
+h1.title {
+text-align: left;
+}
+
+pre {
+  border: 0px solid #cccccc;
+  border-radius: 0px;
+}
+
+body{
+  font-family: "Avenir Regular";
+}
+
+h4.author {
+text-align: left;
+font-family: "Avenir Regular";
+font-size: small;
+}
+
+h4.date {
+  text-align: left;
+  font-family: "Avenir Regular";
+  font-size: small;
+  
+  }
+
+/* ---------- Links ----------------- */
+a {
+color: #1B2C7C;
+}
+a:hover {
+color: #1B2C7C;
+text-decoration: underline;
+}
+
+p.caption {
+  margin-top: 5px;
+  font-size: 0.9em;
+  font-style: italic;
+  color: grey;
+  margin-right: 10%;
+  margin-left: 10%;  
+  text-align: center;
+}
+
+/* ---------- TOC ----------------- */
+#TOC {
+/* top: 40%; */
+/* position: fixed; */
+width: 210px;
+}
+.tocify {
+border: none;
+color: grey;
+border-radius: 0px;
+}
+.list-group-item.active {
+  color: #1B2C7C;
+  background-color: white;
+  border-left: solid;
+  border-color: #1B2C7C;
+}
+.list-group-item:hover {
+  color: #1B2C7C;
+  background-color: white;
+  border-left: solid;
+  border-color: #1B2C7C;
+}
+.tocify-extend-page {
+display: none;
+}
+
+/* ---------- Button ----------------- */
+.btn {
+  border-width: 0 0px 0px 0px;
+  font-weight: normal;
+  color: #1B2C7C;
+}
+.btn-default {
+  color: #1B2C7C;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background-color: #1B2C7C;
+}
+
+pre,
+code {
+  font-family: Menlo, Monaco, "Droid Mono", monospace;
+}
+
+
+p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

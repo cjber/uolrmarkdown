@@ -19,7 +19,7 @@ rmarkdown::draft(
 )
 ```
 
-and for the report:
+Report:
 
 ```r
 rmarkdown::draft(
@@ -28,6 +28,14 @@ rmarkdown::draft(
 )
 ```
 
+HTML:
+
+```r
+rmarkdown::draft(
+  'index.Rmd', template = 'html', 
+  package = 'uolrmarkdown', create_dir = TRUE
+)
+```
 
 # Example Images
 

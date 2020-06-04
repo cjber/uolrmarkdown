@@ -1,0 +1,15 @@
+---
+title: 'Title'
+author: 'Name'
+date: '`r format(Sys.time(), "%d %B, %Y")`'
+output:
+  bookdown::html_document2:
+    number_sections: false
+    toc: true
+    smooth_scroll: true
+    css: theme/style.css
+    code_folding: show
+#bibliography: /home/<biblocation>
+biblio-style: "apalike"
+link-citations: true
+...
