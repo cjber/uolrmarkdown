@@ -50,7 +50,11 @@ rmarkdown::draft(
 
 Chapter Report |  Two Column Article
 :-------------------------:|:-------------------------:
-![](https://github.com/cjber/uolrmarkdown/blob/master/chapter.png)  |  ![](https://github.com/cjber/uolrmarkdown/blob/master/twocol.png)
+![](https://github.com/cjber/uolrmarkdown/blob/master/imgs/chapter.png)  |  ![](https://github.com/cjber/uolrmarkdown/blob/master/imgs/twocol.png)
+
+HTML |  HTML \LaTeX\
+:-------------------------:|:-------------------------:
+![](https://github.com/cjber/uolrmarkdown/blob/master/imgs/html.png)  |  ![](https://github.com/cjber/uolrmarkdown/blob/master/imgs/htmllatex.png)
 
 # Customisation
 
