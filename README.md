@@ -37,6 +37,15 @@ rmarkdown::draft(
 )
 ```
 
+HTML LaTeX:
+
+```r
+rmarkdown::draft(
+  'index.Rmd', template = 'html_latex', 
+  package = 'uolrmarkdown', create_dir = TRUE
+)
+```
+
 # Example Images
 
 Chapter Report |  Two Column Article
