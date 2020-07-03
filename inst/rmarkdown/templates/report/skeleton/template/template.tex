@@ -20,13 +20,15 @@ $endif$
 \usepackage{setspace}
 \onehalfspacing
 
+\usepackage{amsmath} % align equations
 % fonts
-\usepackage[defaultsans]{droidsans}
-\usepackage[bitstream-charter]{mathdesign}
-\usepackage[T1]{fontenc}
+\usepackage{mathspec}
+\usepackage{fontspec}
+\setmonofont[Scale=MatchLowercase]{JetBrains Mono Regular}
+\setallmainfonts(Digits,Latin){XCharter}
+\setmainfont{XCharter}
 
 % misc
-\usepackage{amsmath} % align equations
 \usepackage{type1cm}
 \usepackage{lettrine} % add large first letters
 \usepackage{natbib} % bib management, maybe switch for biblatex
@@ -109,7 +111,7 @@ $endif$
     citecolor = darkred,
     urlcolor = darkblue
 }
-\urlstyle{sf}
+\urlstyle{rm}
 
 % Table of content settings
 \setcounter{tocdepth}{2}
@@ -251,8 +253,5 @@ $endif$
 
 $body$
 
-\bibliographystyle{jss}
-\linespread{1}
-\bibliography{bib/kbib.bib, bib/rbib.bib}
 
 \end{document}

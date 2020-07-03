@@ -4,36 +4,33 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 degree: 'Data Analytics and Society PhD'
 title: 'Title of Chapter Based Report'
 abstract: |
-    `r if(knitr:::is_latex_output()) paste(readLines("00_abstract/abstract.rmd"), collapse = '\n  ')`
+    `r if(knitr:::is_latex_output()) paste(readLines("00_abstract/abstract.Rmd"), collapse = '\n  ')`
 keywords: 'testing; testing; testing'
 output:
   pdf_document:
+    latex_engine: xelatex
     template: ./template/template.tex
     keep_tex: true
 ---
 ```{r defaults, echo = F, warning = F, message = F}
-source("./template/defaults.r")
+source("./template/defaults.R")
 ```
 \chapter{Introduction}
-```{r introduction, child = "01_introduction/introduction.rmd"}
-
+```{r introduction, child = "01_introduction/introduction.Rmd"}
 ```
 \chapter{Literature Review}
-```{r literature, child = "02_literature/literature.rmd"}
-
+```{r literature, child = "02_literature/literature.Rmd"}
 ```
 \chapter{Methodology}
-```{r methods, child = "03_methods/methods.rmd"}
-
+```{r methods, child = "03_methods/methods.Rmd"}
 ```
 \chapter{Results}
-```{r results, child = "04_results/results.rmd"}
-
+```{r results, child = "04_results/results.Rmd"}
 ```
 \chapter{Discussion}
-```{r discussion, child = "05_discussion/discussion.rmd"}
-
+```{r discussion, child = "05_discussion/discussion.Rmd"}
 ```
+
 ```{r pkgbib, results='asis'}
 # no cite all loaded packages from external bib
 cat(paste0("\\nocite{", paste0(pkgs, collapse = ",", sep = ""), "}"))
@@ -42,4 +39,28 @@ cat(paste0("\\nocite{", paste0(pkgs, collapse = ",", sep = ""), "}"))
 ```{bash wordcount, engine ='bash', results = 'asis', cache = F, error = T}
 printf "Word Count: "
 python wclatex.py *.tex
+```
+
+\bibliographystyle{jss}
+\linespread{1}
+\bibliography{bib/kbib.bib, bib/rbib.bib}
+
+\appendix
+\chapter{Environment and Functions}
+```{r envlist}
+## Return the machine CPU
+cat("Machine:     "); print(get_cpu()$model_name)
+
+## Return number of true cores
+cat("Num cores:   "); print(parallel::detectCores(logical = FALSE))
+
+## Return number of threads
+cat("Num threads: "); print(parallel::detectCores(logical = TRUE))
+
+## Return the machine RAM
+cat("RAM:         "); print (get_ram()); cat("\n")
+
+x <- sessionInfo()
+x$loadedOnly <- NULL
+print(x, locale = F)
 ```

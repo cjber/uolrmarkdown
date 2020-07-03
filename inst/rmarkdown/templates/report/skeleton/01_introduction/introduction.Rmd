@@ -12,10 +12,15 @@ data(mpg, package = "ggplot2")
 # Scatterplot using default theme set in defaults.r
 g <- ggplot(mpg, aes(cty, hwy))
 g + geom_jitter(width = .5, size = 1) +
-  labs(
-    y = "Something",
-    x = " Something else"
-  )
+    labs(
+        y = "Something",
+        x = " Something else"
+    )
 ```
 
 \lipsum
+
+```{r, table_1}
+dt <- mtcars[1:15, 1:9]
+cjrmd::make_latex_table(dt, cap = "Test caption")
+```
