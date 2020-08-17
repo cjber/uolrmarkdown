@@ -11,43 +11,7 @@ output:
     keep_tex: true
 ---
 ```{r defaults, echo = F, warning = F, message = F}
-source("./template/defaults.r")
+source("./scripts/functions.R")
 ```
 
 # Section 1
-
-\lipsum[1-2]
-
-```{r, plot, fig.cap = "Example plot showing default ggplot2 theme"}
-data(mpg, package = "ggplot2")
-
-# Scatterplot
-g <- ggplot(mpg, aes(cty, hwy))
-g + geom_jitter(width = .5, size = 1) +
-  labs(
-    y = "Something",
-    x = " Something else"
-  )
-```
-
-## test
-
-Reference figure \ref{fig:plot}
-
-\lipsum[1-2]
-
-# Section 2
-
-\lipsum[1-50]
-
-Hello.
-
-```{r pkgbib, results='asis'}
-# no cite all loaded packages from external bib
-cat(paste0("\\nocite{", paste0(pkgs, collapse = ',', sep = ''),"}"))
-```
-\noindent\rule{2cm}{0.4pt}
-```{r, wc, engine ='bash', results = 'asis', cache = F, error = T}
-printf "Word Count: "
-python wclatex.py *.tex
-```
