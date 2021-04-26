@@ -1,12 +1,11 @@
 if (!require("pacman")) install.packages("pacman")
-library(pacman)
-if (!require("devtools")) install.packages("devtools")
-if (!require("cjrmd")) devtools::install_github("cjber/cjrmd")
-library(cjrmd)
+if (!require("remotes")) install.packages("remotes")
+if (!require("cjrmd")) remotes::install_github("cjber/cjrmd")
 
 pkgs <- c(
+    "here",
+    "rstudioapi",
     "tidyverse",
-    "devtools",
     "ggthemes",
     "kableExtra",
     "scales",

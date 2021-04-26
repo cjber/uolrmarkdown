@@ -1,11 +1,11 @@
-source("./scripts/libraries.R")
+source(here("scripts/libraries.R"))
 
-cjrmd::default_chunk_opts()
+cjrmd::default_latex_chunk_opts()
 
 ## -- bib_opts
-write.bib(pkgs, "bib/rbib.bib")
+write.bib(pkgs, here("bib/rbib.bib"))
 r <- citation()
-write.bib(r, "bib/rbib.bib", append = TRUE)
+write.bib(r, here("bib/rbib.bib"), append = TRUE)
 
 # manual citations here
 man_bib <-

@@ -14,7 +14,7 @@ if not(os.path.isfile(sys.argv[1])):
   print("Path does not exist or is not a file: " + sys.argv[1])
   sys.exit(1)
 
-comment = re.compile("\%.*")
+comment = re.compile(r"\%.*")
 markup = re.compile(r"\\(?:emph|textbf)\{(.*?)\}")
 
 figure = re.compile(r"\\begin{figure}.*?\\end{figure}")
@@ -56,7 +56,3 @@ if len(sys.argv) == 3:
 
 wc = len(c.split())
 print(wc)
-
-#file = open("./plain_words.txt", "w")
-#file.write(c)
-#file.close()

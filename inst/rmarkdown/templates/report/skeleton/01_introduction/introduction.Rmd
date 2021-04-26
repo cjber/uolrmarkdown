@@ -14,7 +14,7 @@ g <- ggplot(mpg, aes(cty, hwy))
 g + geom_jitter(width = .5, size = 1) +
     labs(
         y = "Something",
-        x = " Something else"
+        x = "Something else"
     )
 ```
 

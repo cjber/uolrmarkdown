@@ -13,7 +13,8 @@ output:
     keep_tex: true
 ---
 ```{r defaults, echo = F, warning = F, message = F}
-source("./template/defaults.R")
+library(here)
+source(here("template/defaults.R"))
 ```
 \chapter{Introduction}
 ```{r introduction, child = "01_introduction/introduction.Rmd"}
@@ -49,16 +50,21 @@ python wclatex.py *.tex
 \chapter{Environment and Functions}
 ```{r envlist}
 ## Return the machine CPU
-cat("Machine:     "); print(get_cpu()$model_name)
+cat("Machine:     ")
+print(get_cpu()$model_name)
 
 ## Return number of true cores
-cat("Num cores:   "); print(parallel::detectCores(logical = FALSE))
+cat("Num cores:   ")
+print(parallel::detectCores(logical = FALSE))
 
 ## Return number of threads
-cat("Num threads: "); print(parallel::detectCores(logical = TRUE))
+cat("Num threads: ")
+print(parallel::detectCores(logical = TRUE))
 
 ## Return the machine RAM
-cat("RAM:         "); print (get_ram()); cat("\n")
+cat("RAM:         ")
+print(get_ram())
+cat("\n")
 
 x <- sessionInfo()
 x$loadedOnly <- NULL
