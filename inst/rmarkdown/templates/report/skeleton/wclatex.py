@@ -11,7 +11,7 @@ elif len(sys.argv) != 2:
   sys.exit(1)
 
 if not(os.path.isfile(sys.argv[1])):
-  print("Path does not exist or is not a file: " + sys.argv[1])
+  print(f"Path does not exist or is not a file: {sys.argv[1]}")
   sys.exit(1)
 
 comment = re.compile(r"\%.*")
